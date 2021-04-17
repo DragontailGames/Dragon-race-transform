@@ -9,4 +9,6 @@ public class Transformice
     public EnumDT.TransformiceType transformiceType;
     public float speed;
     public Material material;
+    public int level = 0;
+    public float levelMultiplier = 0.20f;
 }

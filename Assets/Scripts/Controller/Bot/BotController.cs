@@ -31,7 +31,7 @@ public class BotController : CharacterController
     public IEnumerator CanChangeTranformice(int index, bool immediately = false)
     {
         if(!immediately)
-            yield return new WaitForSeconds(speedToChange);
+            yield return new WaitForSeconds(speedToChange + Random.Range(-0.5f, 0.5f));
 
         ChangeTransformice(index);
     }

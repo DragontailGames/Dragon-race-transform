@@ -1,12 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     #region singleton
-
-    public static Manager Instance = null;
+    public static PlayerManager Instance = null;
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -15,13 +15,10 @@ public class Manager : MonoBehaviour
     }
     #endregion
 
-    public List<Level> levels = new List<Level>();
+    public int points = 0;
 
-    public int currentLevel = 0;
-
-    public GameManager gameManager;
-
-    public CanvasManager canvasManager;
-
-    public MenuManager menuManager;
+    public void FinishRun(int reward)
+    {
+        points += reward;
+    }
 }

@@ -10,18 +10,24 @@ public class CharacterController : Move
         {
             name = "Azul",
             speed = 250.0f,
+            level = 0,
+            levelMultiplier = 0.20f,
             transformiceType = EnumDT.TransformiceType.runner,
         },
         new Transformice()
         {
             name = "Marron",
             speed = 200.0f,
+            level = 0,
+            levelMultiplier = 0.20f,
             transformiceType = EnumDT.TransformiceType.breaker,
         },
         new Transformice()
         {
             name = "Purple",
             speed = 125.0f,
+            level = 0,
+            levelMultiplier = 0.20f,
             transformiceType = EnumDT.TransformiceType.specialFloor,
         },
     };
@@ -40,7 +46,7 @@ public class CharacterController : Move
     {
         currentTransformice = transformices[index];
         this.GetComponent<MeshRenderer>().material = currentTransformice.material;
-        speed = currentTransformice.speed;
+        speed = currentTransformice.speed + ((currentTransformice.speed * currentTransformice.levelMultiplier) * currentTransformice.level);
 
     }
 
@@ -77,7 +83,7 @@ public class CharacterController : Move
     {
         if (other.transform.tag == "FinishLine")
         {
-            Debug.Log("No Final");
+            FinishRun();
         }
         if(other.transform.tag == "SpecialFloor")
         {
@@ -110,5 +116,11 @@ public class CharacterController : Move
             speedModifier = 1f;
             HasScenarioInteract(EnumDT.TransformiceType.runner);
         }
+    }
+
+    public virtual void FinishRun()
+    {
+        Manager.Instance.gameManager.CharacterFinishRun(this);
+        this.enabled = false;
     }
 }

@@ -9,4 +9,9 @@ public class PlayerController : CharacterController
         base.Start();
         Manager.Instance.gameManager.playerController = this;
     }
+
+    public override void FinishRun()
+    {
+        base.FinishRun();
+    }
 }
