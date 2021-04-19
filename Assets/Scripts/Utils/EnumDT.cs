@@ -9,5 +9,7 @@ public class EnumDT
         runner,
         breaker,
         specialFloor,
+        climb,
+        fly,
     };
 }

@@ -16,15 +16,25 @@ public class BotController : CharacterController
     {
         if (type == EnumDT.TransformiceType.runner)
         {
-            StartCoroutine(CanChangeTranformice(0));
+             StartCoroutine(CanChangeTranformice(0));
         }
         if (type == EnumDT.TransformiceType.breaker)
         {
-            StartCoroutine(CanChangeTranformice(1));
+             StartCoroutine(CanChangeTranformice(1));
         }
         if(type == EnumDT.TransformiceType.specialFloor)
         {
-            StartCoroutine(CanChangeTranformice(2));
+             StartCoroutine(CanChangeTranformice(2));
+        }
+        if (type == EnumDT.TransformiceType.climb)
+        {
+             StartCoroutine(CanChangeTranformice(3));
+        }
+        if (type == EnumDT.TransformiceType.fly)
+        {
+            StartCoroutine(CanChangeTranformice(4, true));
+            InFlying(true);
+            startY = this.transform.position.y;
         }
     }
 

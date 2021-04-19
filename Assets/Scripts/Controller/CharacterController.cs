@@ -8,7 +8,7 @@ public class CharacterController : Move
     {
         new Transformice()
         {
-            name = "Azul",
+            name = "Blue",
             speed = 250.0f,
             level = 0,
             levelMultiplier = 0.20f,
@@ -16,7 +16,7 @@ public class CharacterController : Move
         },
         new Transformice()
         {
-            name = "Marron",
+            name = "Brown",
             speed = 200.0f,
             level = 0,
             levelMultiplier = 0.20f,
@@ -25,10 +25,26 @@ public class CharacterController : Move
         new Transformice()
         {
             name = "Purple",
-            speed = 125.0f,
+            speed = 100.0f,
             level = 0,
             levelMultiplier = 0.20f,
             transformiceType = EnumDT.TransformiceType.specialFloor,
+        },
+        new Transformice()
+        {
+            name = "Red",
+            speed = 200.0f,
+            level = 0,
+            levelMultiplier = 0.20f,
+            transformiceType = EnumDT.TransformiceType.climb,
+        },
+        new Transformice()
+        {
+            name = "Green",
+            speed = 200.0f,
+            level = 0,
+            levelMultiplier = 0.20f,
+            transformiceType = EnumDT.TransformiceType.fly,
         },
     };
 
@@ -47,14 +63,11 @@ public class CharacterController : Move
         currentTransformice = transformices[index];
         this.GetComponent<MeshRenderer>().material = currentTransformice.material;
         speed = currentTransformice.speed + ((currentTransformice.speed * currentTransformice.levelMultiplier) * currentTransformice.level);
-
     }
 
-    public virtual void HasScenarioInteract(EnumDT.TransformiceType type)
-    {
-    }
+    public virtual void HasScenarioInteract(EnumDT.TransformiceType type){}
 
-    public virtual void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.tag == "Barrier")
         {
@@ -65,9 +78,17 @@ public class CharacterController : Move
             }
             HasScenarioInteract(EnumDT.TransformiceType.breaker);
         }
+        if (collision.transform.tag == "ClimbWall")
+        {
+            HasScenarioInteract(EnumDT.TransformiceType.climb);
+            if (currentTransformice.transformiceType == EnumDT.TransformiceType.climb)
+            {
+                climb = true;
+            }
+        }
     }
 
-    public virtual void OnCollisionStay(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
         if (collision.transform.tag == "Barrier")
         {
@@ -77,9 +98,26 @@ public class CharacterController : Move
                 HasScenarioInteract(EnumDT.TransformiceType.runner);
             }
         }
+        if (collision.transform.tag == "ClimbWall" && climb == false)
+        {
+            HasScenarioInteract(EnumDT.TransformiceType.climb);
+            if (currentTransformice.transformiceType == EnumDT.TransformiceType.climb)
+            {
+                climb = true;
+            }
+        }
     }
 
-    public virtual void OnTriggerEnter(Collider other)
+    public void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag == "ClimbWall")
+        {
+            climb = false;
+            HasScenarioInteract(EnumDT.TransformiceType.runner);
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "FinishLine")
         {
@@ -93,7 +131,7 @@ public class CharacterController : Move
         }
     }
 
-    public virtual void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.transform.tag == "SpecialFloor")
         {
@@ -109,12 +147,28 @@ public class CharacterController : Move
         }
     }
 
-    public virtual void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if (other.transform.tag == "SpecialFloor")
         {
             speedModifier = 1f;
             HasScenarioInteract(EnumDT.TransformiceType.runner);
+        }
+        if (other.transform.tag == "FlyMarker")
+        {
+            if (!flying)
+            {
+                if (currentTransformice.transformiceType == EnumDT.TransformiceType.fly)
+                {
+                    InFlying(true);
+                }
+                HasScenarioInteract(EnumDT.TransformiceType.fly);
+            }
+            else
+            {
+                InFlying(false);
+                HasScenarioInteract(EnumDT.TransformiceType.runner);
+            }
         }
     }
 

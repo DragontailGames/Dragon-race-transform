@@ -38,15 +38,18 @@ public class GameManager : MonoBehaviour
 
     public void CreateMap(int tiles, int level)
     {
+        float nextY = 0;
         for(int i = 0;i<tiles;i++)
         {
-            GameObject floor = Instantiate(prefabFloors[Random.Range(0, level)], new Vector3(0, 0, 0), Quaternion.identity);
-            float size = floor.GetComponent<MeshRenderer>().bounds.size.z;
-            floor.transform.position = new Vector3(0, 0, size * i);
+            int flootType = Random.Range(0, level);
+            GameObject floor = Instantiate(prefabFloors[flootType], new Vector3(0, 0, 0), Quaternion.identity);
+            Vector3 size = floor.GetComponent<MeshRenderer>().bounds.size;
+            floor.transform.position = new Vector3(0, nextY, size.z * i);
+            nextY += size.y - 0.2f;
         }
 
         GameObject finishLine = Instantiate(prefabFloors[prefabFloors.Count - 1], new Vector3(0, 0, 0), Quaternion.identity);
-        finishLine.transform.position = new Vector3(0, 0, finishLine.GetComponent<MeshRenderer>().bounds.size.z * tiles);
+        finishLine.transform.position = new Vector3(0, nextY, finishLine.GetComponent<MeshRenderer>().bounds.size.z * tiles);
     }
 
     public void CharacterFinishRun(CharacterController controller)
