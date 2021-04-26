@@ -308,6 +308,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1046727263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046727265}
+  - component: {fileID: 1046727264}
+  m_Layer: 0
+  m_Name: StoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1046727264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046727263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b54d86044c255439e2726f8515494b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeItems:
+  - name: Ninja_Red
+    id: 0
+    price: 100
+    item: {fileID: 2100000, guid: 15462656d6ff7074ba33213741cb3a6d, type: 2}
+    buyed: 0
+--- !u!4 &1046727265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046727263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5, y: 1.5999999, z: -14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1054511870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1131,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657262876}
   m_CullTransparentMesh: 1
+--- !u!1001 &1676516202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5137156063086903359, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 15462656d6ff7074ba33213741cb3a6d, type: 2}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -47.42217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3998065
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.514352
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454733792657409053, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780232627861311000, guid: 13f1ef390002c304b9b1f434b4e38d47,
+        type: 3}
+      propertyPath: m_Name
+      value: Ninja
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13f1ef390002c304b9b1f434b4e38d47, type: 3}
 --- !u!1001 &1697718967
 PrefabInstance:
   m_ObjectHideFlags: 0
