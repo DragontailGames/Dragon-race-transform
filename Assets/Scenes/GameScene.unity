@@ -1216,6 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
+  tileFloors: []
   prefabFloors:
   - {fileID: 3516240913209388895, guid: 507480d0da6e00a4f83bd66654ceef4c, type: 3}
   - {fileID: 6944957800711874584, guid: c37f259088b8796408a9cd8a453c16e2, type: 3}
@@ -1225,7 +1226,7 @@ MonoBehaviour:
   finishers: []
   currentLevel:
     name: leve_01
-    tiles: 4
+    tiles: 2
     level: 4
     reward: 100
 --- !u!4 &701353948
@@ -2951,7 +2952,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.6039216, g: 0.63538826, b: 0.9607843, a: 1}
+  m_BackGroundColor: {r: 0.9056604, g: 0.18369527, b: 0.79866546, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

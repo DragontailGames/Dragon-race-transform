@@ -25,34 +25,16 @@ public class GameManager : MonoBehaviour
 
     private MapPreset mapPreset = new MapPreset();
 
-    public Level currentLevel;
+    int currentLevel = 0;
 
     void Awake()
     {
         Manager.Instance.gameManager = this;
-        if (Manager.Instance.levels.Count > 0)
-        {
-            if (Manager.Instance.levels.Count > Manager.Instance.currentLevel)
-            {
-                currentLevel = Manager.Instance.levels[Manager.Instance.currentLevel];
-            }
-            else
-            {
-                currentLevel = new Level()
-                {
-                    level = 2,
-                    tiles = Manager.Instance.currentLevel,
-                    reward = 500 + 100 * Manager.Instance.currentLevel,
-                };
-            }
-        }
         CreateMap() ;
     }
 
     public void CreateMap()
     {
-        int currentLevel = 0;
-
         if (PlayerPrefs.HasKey("LEVEL"))
         {
             currentLevel = PlayerPrefs.GetInt("LEVEL");
@@ -72,10 +54,10 @@ public class GameManager : MonoBehaviour
         float nextY = 0;
         for(int i = 0;i<tiles.Count;i++)
         {
-            GameObject floor = Instantiate(prefabFloors[i], new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject floor = Instantiate(prefabFloors[tiles[i]], new Vector3(0, 0, 0), Quaternion.identity);
             Vector3 size = floor.GetComponent<MeshRenderer>().bounds.size;
             floor.transform.position = new Vector3(0, nextY, size.z * i);
-            nextY += size.y - 0.2f;
+            nextY += size.y;
         }
 
         GameObject finishLine = Instantiate(prefabFloors[prefabFloors.Count - 1], new Vector3(0, 0, 0), Quaternion.identity);
@@ -86,7 +68,7 @@ public class GameManager : MonoBehaviour
     {
         if (controller == playerController)
         {
-            int reward = Mathf.RoundToInt((float)(currentLevel.reward - (currentLevel.reward * (0.25 * finishers.Count))));
+            int reward = Mathf.RoundToInt((float)(currentLevel - (currentLevel * (0.25 * finishers.Count))) * 100) ;
             PlayerManager.Instance.FinishRun(reward);
             Manager.Instance.currentLevel++;
             Manager.Instance.canvasManager.EndGame(reward);
