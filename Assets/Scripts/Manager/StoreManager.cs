@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class StoreManager : MonoBehaviour
 {
     [Header("Store")]
-    public List<StoreItem<Material>> storeItems = new List<StoreItem<Material>>();
+    public Store<Material> store;
 
     void Start()
     {
-        
+        store.CreateCanvas(PlayerManager.Instance.Money);
+        store.spendMoney = (money) => { PlayerManager.Instance.Money -= money; };
     }
 
-    void Update()
+    private void Update()
     {
-        
+        store.currentMoney = PlayerManager.Instance.Money;
     }
 }

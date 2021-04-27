@@ -14,4 +14,6 @@ public class StoreItem<T>
     public T item;
 
     public bool buyed = false;
+
+    public Sprite icon;
 }

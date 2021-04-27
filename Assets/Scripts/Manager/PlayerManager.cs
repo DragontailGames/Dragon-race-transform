@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
     #region singleton
     public static PlayerManager Instance = null;
 
-    const string POINTS_PREFS = "points";
+    const string MONEY_PREFS = "money";
 
     void Awake()
     {
@@ -16,18 +16,23 @@ public class PlayerManager : MonoBehaviour
         else if (Instance != this) Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
 
-        if(PlayerPrefs.HasKey(POINTS_PREFS))
+        if(!PlayerPrefs.HasKey(MONEY_PREFS))
         {
-            points = PlayerPrefs.GetInt(POINTS_PREFS);
+            PlayerPrefs.SetInt(MONEY_PREFS, 0);
         }
     }
     #endregion
 
-    public int points = 0;
+    public int Money {
+        get { return PlayerPrefs.GetInt(MONEY_PREFS); }
+        set 
+        {
+            PlayerPrefs.SetInt(MONEY_PREFS, value);
+        }
+    }
 
     public void FinishRun(int reward)
     {
-        points += reward;
-        PlayerPrefs.SetInt(POINTS_PREFS, points);
+        Money += reward;
     }
 }

@@ -54,7 +54,6 @@ public class MapPreset
 
     public List<int> GetMap(int level)
     {
-        Debug.Log("Generate map " + level);
         return presetMap[level];
     }
 }

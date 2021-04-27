@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1639398732418113524}
   - component: {fileID: 1639398732421486946}
   - component: {fileID: 1639398732420374322}
-  - component: {fileID: 1595516241668187350}
   - component: {fileID: 1639398733656391268}
   m_Layer: 0
   m_Name: SM_Prop_Shamisen_01
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1595516241668187350
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398732418350746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43103740225840570, guid: 8b7e23ead388a6f479fd49a52e20c263, type: 2}
 --- !u!54 &1639398733656391268
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,8 +93,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -124,7 +109,6 @@ GameObject:
   - component: {fileID: 1639398732515377519}
   - component: {fileID: 1639398732518280797}
   - component: {fileID: 1639398732517228849}
-  - component: {fileID: 1595564680162797615}
   - component: {fileID: 1639398734009278262}
   m_Layer: 0
   m_Name: SM_Prop_Flute_01 (1)
@@ -196,20 +180,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1595564680162797615
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398732515017553}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43682752815260786, guid: cfba3ffa59948fd4ea676bb29d60e8fb, type: 2}
 --- !u!54 &1639398734009278262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,8 +191,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -237,7 +207,6 @@ GameObject:
   - component: {fileID: 1639398732786867977}
   - component: {fileID: 1639398732783472365}
   - component: {fileID: 1639398732784960163}
-  - component: {fileID: 1595523642662926145}
   - component: {fileID: 1639398732711669393}
   m_Layer: 0
   m_Name: SM_Prop_Fan_03
@@ -309,20 +278,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1595523642662926145
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398732786631975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43431309422743180, guid: 0ce93f3985778fb4cb7cc5d5ff369f7f, type: 2}
 --- !u!54 &1639398732711669393
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -334,8 +289,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -350,7 +305,6 @@ GameObject:
   - component: {fileID: 1639398733072125575}
   - component: {fileID: 1639398733068632665}
   - component: {fileID: 1639398733069687163}
-  - component: {fileID: 1596480304349776583}
   - component: {fileID: 1639398734096870994}
   m_Layer: 0
   m_Name: SM_Prop_Table_03
@@ -422,19 +376,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1596480304349776583
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398733071877201}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.90411377, y: 0.7896583, z: 0.93255615}
-  m_Center: {x: 0, y: 0.39482915, z: 0}
 --- !u!54 &1639398734096870994
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -446,8 +387,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -462,7 +403,6 @@ GameObject:
   - component: {fileID: 1639398733712055285}
   - component: {fileID: 1639398733711250631}
   - component: {fileID: 1639398733710203819}
-  - component: {fileID: 1595564678156432053}
   - component: {fileID: 1639398732444043301}
   m_Layer: 0
   m_Name: SM_Prop_Flute_01
@@ -534,20 +474,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1595564678156432053
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398733712415179}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43682752815260786, guid: cfba3ffa59948fd4ea676bb29d60e8fb, type: 2}
 --- !u!54 &1639398732444043301
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -559,8 +485,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -575,7 +501,6 @@ GameObject:
   - component: {fileID: 1639398733768658832}
   - component: {fileID: 1639398733771967882}
   - component: {fileID: 1639398733770938232}
-  - component: {fileID: 1595365622281818722}
   - component: {fileID: 1639398734214939826}
   m_Layer: 0
   m_Name: SM_Prop_Bamboo_Pole_01
@@ -647,20 +572,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1595365622281818722
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398733768929878}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43902842692904228, guid: fed0732072ad909468bf1192f35c0cc0, type: 2}
 --- !u!54 &1639398734214939826
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -672,8 +583,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -688,7 +599,6 @@ GameObject:
   - component: {fileID: 1639398733807140538}
   - component: {fileID: 1639398733809982660}
   - component: {fileID: 1639398733808988820}
-  - component: {fileID: 1596169345090513182}
   - component: {fileID: 1639398732338573846}
   m_Layer: 0
   m_Name: SM_Prop_Fan_04
@@ -760,20 +670,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1596169345090513182
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639398733806932744}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43997305818865456, guid: bfe1d1bb86a44aa438c258a35e91e748, type: 2}
 --- !u!54 &1639398732338573846
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -785,8 +681,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -801,7 +697,6 @@ GameObject:
   - component: {fileID: 1640669290856178316}
   - component: {fileID: 1640669290856923378}
   - component: {fileID: 1640669290858000034}
-  - component: {fileID: 1594907580779443496}
   - component: {fileID: 1640669292558511648}
   m_Layer: 0
   m_Name: SM_Prop_Fan_04
@@ -873,20 +768,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1594907580779443496
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640669290855845694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43997305818865456, guid: bfe1d1bb86a44aa438c258a35e91e748, type: 2}
 --- !u!54 &1640669292558511648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -898,8 +779,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -914,7 +795,6 @@ GameObject:
   - component: {fileID: 1640669290884682662}
   - component: {fileID: 1640669290886025660}
   - component: {fileID: 1640669290887056206}
-  - component: {fileID: 1596355531200073300}
   - component: {fileID: 1640669291211135108}
   m_Layer: 0
   m_Name: SM_Prop_Bamboo_Pole_01
@@ -986,20 +866,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1596355531200073300
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640669290884951648}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43902842692904228, guid: fed0732072ad909468bf1192f35c0cc0, type: 2}
 --- !u!54 &1640669291211135108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1011,8 +877,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1227,8 +1093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f829449cef9e74493bedd55498efb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  power: 300
 --- !u!1 &1640669292115155217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1104,6 @@ GameObject:
   - component: {fileID: 1640669292115510079}
   - component: {fileID: 1640669292114186971}
   - component: {fileID: 1640669292113223317}
-  - component: {fileID: 1594542814295386999}
   - component: {fileID: 1640669291908068007}
   m_Layer: 0
   m_Name: SM_Prop_Fan_03
@@ -1312,20 +1175,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1594542814295386999
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640669292115155217}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43431309422743180, guid: 0ce93f3985778fb4cb7cc5d5ff369f7f, type: 2}
 --- !u!54 &1640669291908068007
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1337,8 +1186,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1640,7 +1489,6 @@ GameObject:
   - component: {fileID: 3262306817258230289}
   - component: {fileID: 3262306817261657379}
   - component: {fileID: 3262306817260606031}
-  - component: {fileID: 3288418471969192785}
   - component: {fileID: 3262306819081454017}
   m_Layer: 0
   m_Name: SM_Prop_Flute_01
@@ -1712,20 +1560,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3288418471969192785
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3262306817258393647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43682752815260786, guid: cfba3ffa59948fd4ea676bb29d60e8fb, type: 2}
 --- !u!54 &3262306819081454017
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1737,8 +1571,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1753,7 +1587,6 @@ GameObject:
   - component: {fileID: 3262306818463860579}
   - component: {fileID: 3262306818464598973}
   - component: {fileID: 3262306818465648799}
-  - component: {fileID: 3288064039624622883}
   - component: {fileID: 3262306817412392886}
   m_Layer: 0
   m_Name: SM_Prop_Table_03
@@ -1825,19 +1658,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3288064039624622883
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3262306818463583669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.90411377, y: 0.7896583, z: 0.93255615}
-  m_Center: {x: 0, y: 0.39482915, z: 0}
 --- !u!54 &3262306817412392886
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1849,8 +1669,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1865,7 +1685,6 @@ GameObject:
   - component: {fileID: 3262306819018377355}
   - component: {fileID: 3262306819017050041}
   - component: {fileID: 3262306819016001749}
-  - component: {fileID: 3288418470489858507}
   - component: {fileID: 3262306817526191826}
   m_Layer: 0
   m_Name: SM_Prop_Flute_01 (1)
@@ -1937,20 +1756,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3288418470489858507
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3262306819018214069}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43682752815260786, guid: cfba3ffa59948fd4ea676bb29d60e8fb, type: 2}
 --- !u!54 &3262306817526191826
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1962,8 +1767,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1978,7 +1783,6 @@ GameObject:
   - component: {fileID: 3262306819089045008}
   - component: {fileID: 3262306819088289926}
   - component: {fileID: 3262306819087177430}
-  - component: {fileID: 3288246907358244146}
   - component: {fileID: 3262306817877915520}
   m_Layer: 0
   m_Name: SM_Prop_Shamisen_01
@@ -2050,20 +1854,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3288246907358244146
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3262306819089348478}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43103740225840570, guid: 8b7e23ead388a6f479fd49a52e20c263, type: 2}
 --- !u!54 &3262306817877915520
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2075,8 +1865,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10528,8 +10318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f829449cef9e74493bedd55498efb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  power: 300
 --- !u!1 &5959995114044048530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10541,7 +10329,6 @@ GameObject:
   - component: {fileID: 5959995114044409516}
   - component: {fileID: 5959995114043083166}
   - component: {fileID: 5959995114042033906}
-  - component: {fileID: 5932052234495012844}
   - component: {fileID: 5959995115773188341}
   m_Layer: 0
   m_Name: SM_Prop_Flute_01 (1)
@@ -10613,20 +10400,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5932052234495012844
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995114044048530}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43682752815260786, guid: cfba3ffa59948fd4ea676bb29d60e8fb, type: 2}
 --- !u!54 &5959995115773188341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10638,8 +10411,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10654,7 +10427,6 @@ GameObject:
   - component: {fileID: 5959995114123270199}
   - component: {fileID: 5959995114122452641}
   - component: {fileID: 5959995114121337073}
-  - component: {fileID: 5931836769281499925}
   - component: {fileID: 5959995115185387943}
   m_Layer: 0
   m_Name: SM_Prop_Shamisen_01
@@ -10726,20 +10498,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5931836769281499925
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995114123508057}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43103740225840570, guid: 8b7e23ead388a6f479fd49a52e20c263, type: 2}
 --- !u!54 &5959995115185387943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10751,8 +10509,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10767,7 +10525,6 @@ GameObject:
   - component: {fileID: 5959995114311702730}
   - component: {fileID: 5959995114312468782}
   - component: {fileID: 5959995114313991520}
-  - component: {fileID: 5931812181032661122}
   - component: {fileID: 5959995114517522770}
   m_Layer: 0
   m_Name: SM_Prop_Fan_03
@@ -10839,20 +10596,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5931812181032661122
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995114311467748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43431309422743180, guid: 0ce93f3985778fb4cb7cc5d5ff369f7f, type: 2}
 --- !u!54 &5959995114517522770
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10864,8 +10607,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10880,7 +10623,6 @@ GameObject:
   - component: {fileID: 5959995114563373380}
   - component: {fileID: 5959995114564109722}
   - component: {fileID: 5959995114565164728}
-  - component: {fileID: 5931700220764966148}
   - component: {fileID: 5959995115802061201}
   m_Layer: 0
   m_Name: SM_Prop_Table_03
@@ -10952,19 +10694,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5931700220764966148
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995114563158930}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.90411377, y: 0.7896583, z: 0.93255615}
-  m_Center: {x: 0, y: 0.39482915, z: 0}
 --- !u!54 &5959995115802061201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10976,8 +10705,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10992,7 +10721,6 @@ GameObject:
   - component: {fileID: 5959995115473848403}
   - component: {fileID: 5959995115472964169}
   - component: {fileID: 5959995115471900859}
-  - component: {fileID: 5932814214431905185}
   - component: {fileID: 5959995115685217137}
   m_Layer: 0
   m_Name: SM_Prop_Bamboo_Pole_01
@@ -11064,20 +10792,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5932814214431905185
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995115474122133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43902842692904228, guid: fed0732072ad909468bf1192f35c0cc0, type: 2}
 --- !u!54 &5959995115685217137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11089,8 +10803,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -11105,7 +10819,6 @@ GameObject:
   - component: {fileID: 5959995115513682998}
   - component: {fileID: 5959995115517104900}
   - component: {fileID: 5959995115516058728}
-  - component: {fileID: 5932052232761308534}
   - component: {fileID: 5959995114249900006}
   m_Layer: 0
   m_Name: SM_Prop_Flute_01
@@ -11177,20 +10890,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5932052232761308534
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995115514043912}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43682752815260786, guid: cfba3ffa59948fd4ea676bb29d60e8fb, type: 2}
 --- !u!54 &5959995114249900006
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11202,8 +10901,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -11218,7 +10917,6 @@ GameObject:
   - component: {fileID: 5959995115571050873}
   - component: {fileID: 5959995115569699591}
   - component: {fileID: 5959995115568674135}
-  - component: {fileID: 5931465024451948253}
   - component: {fileID: 5959995113800496597}
   m_Layer: 0
   m_Name: SM_Prop_Fan_04
@@ -11290,20 +10988,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5931465024451948253
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5959995115570844875}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43997305818865456, guid: bfe1d1bb86a44aa438c258a35e91e748, type: 2}
 --- !u!54 &5959995113800496597
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11315,8 +10999,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -11435,8 +11119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f829449cef9e74493bedd55498efb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  power: 300
 --- !u!1 &8412373939497039018
 GameObject:
   m_ObjectHideFlags: 0

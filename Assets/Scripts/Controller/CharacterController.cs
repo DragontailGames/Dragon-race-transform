@@ -73,7 +73,7 @@ public class CharacterController : Move
         {
             if (currentTransformice.transformiceType == EnumDT.TransformiceType.breaker)
             {
-                Destroy(collision.gameObject);
+                collision.transform.GetComponent<ExplodeObstacle>().ExplodeMe();
                 HasScenarioInteract(EnumDT.TransformiceType.runner);
             }
             HasScenarioInteract(EnumDT.TransformiceType.breaker);
@@ -94,7 +94,7 @@ public class CharacterController : Move
         {
             if (currentTransformice.transformiceType == EnumDT.TransformiceType.breaker)
             {
-                Destroy(collision.gameObject);
+                collision.transform.GetComponent<ExplodeObstacle>().ExplodeMe();
                 HasScenarioInteract(EnumDT.TransformiceType.runner);
             }
         }

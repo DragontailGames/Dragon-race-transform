@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        textPoint.text = "Points: " + PlayerManager.Instance.points;
+        textPoint.text = "Points: " + PlayerManager.Instance.Money;
     }
 
     public void GotoGame()
