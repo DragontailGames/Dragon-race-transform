@@ -445,13 +445,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1312745095849932093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6a6df342b52d24092cf6bbb590c535, type: 3}
+  m_Script: {fileID: 11500000, guid: f50c74a99e5aaec499dac56f5e41f4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveHeight: 1.03
-  waveFrequency: 0.07
-  waveLength: 4.77
-  waveOriginPosition: {x: 39.7, y: 0, z: 0}
+  waveHeight: 0.5
+  waveFrequency: 0.5
+  waveLength: 0.75
+  waveOriginPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1312745095925560844
 GameObject:
   m_ObjectHideFlags: 0
