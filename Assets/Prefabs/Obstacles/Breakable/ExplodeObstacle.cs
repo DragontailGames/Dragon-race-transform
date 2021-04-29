@@ -5,30 +5,15 @@ using System.Collections;
 public class ExplodeObstacle : MonoBehaviour
 {
     private float radius = 10.0F;
-    private float power = 500.0F;
-
-    void Start()
-    {
-
-    }
-    private void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ExplodeMe();
-        }
-
-    }
-
+    private float power = 30.0F;
     public void ExplodeMe()
     {
+        this.transform.GetComponent<BoxCollider>().isTrigger = true;
         foreach (Transform aux in this.transform)
         {
             aux.GetComponent<Rigidbody>().useGravity = true;
-            aux.GetComponent<Rigidbody>().AddExplosionForce(power , this.transform.position + Vector3.down * 0.5f, radius, 3.0f);
+            aux.GetComponent<Rigidbody>().AddExplosionForce(power , this.transform.position + Vector3.down * 0.5f, radius, 2.0f);
         }
-        this.transform.GetComponent<BoxCollider>().isTrigger = true;
         Destroy(this.gameObject, 3.0f);
     }
 }

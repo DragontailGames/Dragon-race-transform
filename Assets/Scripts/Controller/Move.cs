@@ -31,6 +31,7 @@ public class Move : MonoBehaviour
 
     public void InFlying(bool fly)
     {
+        Debug.Log("Fly " + fly);
         flying = fly;
         if(fly)
         {

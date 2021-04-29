@@ -8,42 +8,47 @@ public class CharacterController : Move
     {
         new Transformice()
         {
-            name = "Blue",
+            name = "Peasant",
             speed = 250.0f,
             level = 0,
             levelMultiplier = 0.20f,
+            modelName = "Peasant",
             transformiceType = EnumDT.TransformiceType.runner,
         },
         new Transformice()
         {
-            name = "Brown",
+            name = "Samurai",
             speed = 200.0f,
             level = 0,
             levelMultiplier = 0.20f,
+            modelName = "Samurai",
             transformiceType = EnumDT.TransformiceType.breaker,
         },
         new Transformice()
         {
-            name = "Purple",
+            name = "Geisha",
             speed = 100.0f,
             level = 0,
             levelMultiplier = 0.20f,
+            modelName = "Geisha",
             transformiceType = EnumDT.TransformiceType.specialFloor,
         },
         new Transformice()
         {
-            name = "Red",
+            name = "Ninja",
             speed = 200.0f,
             level = 0,
             levelMultiplier = 0.20f,
+            modelName = "Ninja",
             transformiceType = EnumDT.TransformiceType.climb,
         },
         new Transformice()
         {
-            name = "Green",
+            name = "Sensei",
             speed = 200.0f,
             level = 0,
             levelMultiplier = 0.20f,
+            modelName = "Sensei",
             transformiceType = EnumDT.TransformiceType.fly,
         },
     };
@@ -51,6 +56,8 @@ public class CharacterController : Move
     public Transformice currentTransformice;
 
     public Transform interactObject;
+
+    private Animator currentAnimator;
 
     public override void Start()
     {
@@ -60,8 +67,19 @@ public class CharacterController : Move
 
     public void ChangeTransformice(int index)
     {
+        Transform models = this.transform.Find("Models");
+        if (!string.IsNullOrEmpty(currentTransformice.modelName))
+        {
+            models.transform.Find(currentTransformice.modelName).gameObject.SetActive(false);
+        }
+
         currentTransformice = transformices[index];
-        this.GetComponent<MeshRenderer>().material = currentTransformice.material;
+
+        GameObject currentModel = models.transform.Find(currentTransformice.modelName).gameObject;
+        currentModel.SetActive(true);
+        currentAnimator = currentModel.GetComponent<Animator>();
+        currentAnimator.SetBool("isRunning", true);
+
         speed = currentTransformice.speed + ((currentTransformice.speed * currentTransformice.levelMultiplier) * currentTransformice.level);
     }
 
@@ -73,7 +91,8 @@ public class CharacterController : Move
         {
             if (currentTransformice.transformiceType == EnumDT.TransformiceType.breaker)
             {
-                collision.transform.GetComponent<ExplodeObstacle>().ExplodeMe();
+                currentAnimator.SetTrigger("Attack");
+                StartCoroutine(ExplodeBarrier(collision.transform));
                 HasScenarioInteract(EnumDT.TransformiceType.runner);
             }
             HasScenarioInteract(EnumDT.TransformiceType.breaker);
@@ -83,7 +102,7 @@ public class CharacterController : Move
             HasScenarioInteract(EnumDT.TransformiceType.climb);
             if (currentTransformice.transformiceType == EnumDT.TransformiceType.climb)
             {
-                climb = true;
+                Climb(true);
             }
         }
     }
@@ -94,7 +113,8 @@ public class CharacterController : Move
         {
             if (currentTransformice.transformiceType == EnumDT.TransformiceType.breaker)
             {
-                collision.transform.GetComponent<ExplodeObstacle>().ExplodeMe();
+                currentAnimator.SetTrigger("Attack");
+                StartCoroutine(ExplodeBarrier(collision.transform));
                 HasScenarioInteract(EnumDT.TransformiceType.runner);
             }
         }
@@ -103,7 +123,7 @@ public class CharacterController : Move
             HasScenarioInteract(EnumDT.TransformiceType.climb);
             if (currentTransformice.transformiceType == EnumDT.TransformiceType.climb)
             {
-                climb = true;
+                Climb(true);
             }
         }
     }
@@ -112,7 +132,7 @@ public class CharacterController : Move
     {
         if (collision.transform.tag == "ClimbWall")
         {
-            climb = false;
+            Climb(false);
             HasScenarioInteract(EnumDT.TransformiceType.runner);
         }
     }
@@ -156,16 +176,20 @@ public class CharacterController : Move
         }
         if (other.transform.tag == "FlyMarker")
         {
+            Debug.Log("Teste 1");
             if (!flying)
             {
+                Debug.Log("Teste 2");
                 if (currentTransformice.transformiceType == EnumDT.TransformiceType.fly)
                 {
+                    Debug.Log("Teste 3");
                     InFlying(true);
                 }
                 HasScenarioInteract(EnumDT.TransformiceType.fly);
             }
             else
             {
+                Debug.Log("Teste 4");
                 InFlying(false);
                 HasScenarioInteract(EnumDT.TransformiceType.runner);
             }
@@ -176,5 +200,18 @@ public class CharacterController : Move
     {
         Manager.Instance.gameManager.CharacterFinishRun(this);
         this.enabled = false;
+    }
+
+    public IEnumerator ExplodeBarrier(Transform barrier)
+    {
+        yield return new WaitForSeconds(0.2f);
+        barrier.GetComponent<ExplodeObstacle>().ExplodeMe();
+    }
+
+    public void Climb(bool startClimb)
+    {
+        currentAnimator.SetBool("isRunning", !startClimb);
+        currentAnimator.SetBool("isClimbing", startClimb);
+        climb = startClimb;
     }
 }
